@@ -1,16 +1,21 @@
+// import { useState } from "react";
+
 function GeneralInformation() {
   return (
     <>
-      <h1>General Information</h1>
-      <p>
+      <h2>General Information</h2>
+      <label>
         Name: <input type="text" />
-      </p>
-      <p>
+      </label>
+      <br />
+      <label>
         Email: <input type="email" />
-      </p>
-      <p>
+      </label>
+      <br />
+      <label>
         Phone Number: <input type="tel" />
-      </p>
+      </label>
+      <hr />
     </>
   );
 }

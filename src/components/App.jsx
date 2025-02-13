@@ -1,15 +1,19 @@
-import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
 import "../styles/App.css";
 import GeneralInformation from "./GeneralInformation";
+import Education from "./Education";
+import Work from "./Work";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <GeneralInformation></GeneralInformation>
+      <h1>CV Application</h1>
+      <hr />
+      <form action="">
+        <GeneralInformation></GeneralInformation>
+        <Education></Education>
+        <Work></Work>
+        <input type="submit" value="Submit" />
+      </form>
     </>
   );
 }
