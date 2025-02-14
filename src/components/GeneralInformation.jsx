@@ -5,15 +5,15 @@ function GeneralInformation() {
     <>
       <h2>General Information</h2>
       <label>
-        Name: <input type="text" />
+        Name: <input name="name" type="text" />
       </label>
       <br />
       <label>
-        Email: <input type="email" />
+        Email: <input name="email" type="email" />
       </label>
       <br />
       <label>
-        Phone Number: <input type="tel" />
+        Phone Number: <input name="phoneNumber" type="tel" />
       </label>
       <hr />
     </>
