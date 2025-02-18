@@ -3,15 +3,15 @@ function Education() {
     <>
       <h2>Educational Experience</h2>
       <label>
-        School Name: <input type="text" />
+        School Name: <input name="schoolName" type="text" />
       </label>
       <br />
       <label>
-        Title of Study: <input type="text" />
+        Title of Study: <input name="titleOfStudy" type="text" />
       </label>
       <br />
       <label>
-        Date of Study: <input type="date" />
+        Date of Study: <input name="dateOfStudy" type="date" />
       </label>
       <br />
       <hr />
