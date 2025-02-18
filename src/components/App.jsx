@@ -7,12 +7,7 @@ import { useState } from "react";
 
 function App() {
   const [submitted, setSubmitted] = useState(false);
-
-  let userData = {
-    name: "",
-    email: "",
-    phoneNumber: "",
-  };
+  const [userData, setUserData] = useState({});
   let content;
 
   function handleSubmit(e) {
@@ -20,13 +15,8 @@ function App() {
     const form = e.target;
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
-    formData.entries().forEach((element) => {
-      const [key, value] = element;
-      userData[key] = value;
-      console.log(userData);
-    });
+    setUserData(formJson);
     setSubmitted(!submitted);
-    console.log(formJson);
   }
 
   if (!submitted) {
@@ -35,14 +25,9 @@ function App() {
         <h1>CV Application</h1>
         <hr />
         <form method="post" onSubmit={handleSubmit}>
-          {/* make an object that contains properties that can be put into these modules and props to render and also save state when going to edit and back to submit */}
-          <GeneralInformation
-            name={userData.name}
-            email={userData.email}
-            phoneNumber={userData.phoneNumber}
-          ></GeneralInformation>
-          <Education></Education>
-          <Work></Work>
+          <GeneralInformation userData={userData}></GeneralInformation>
+          <Education userData={userData}></Education>
+          <Work userData={userData}></Work>
           <input type="submit" value="Submit" />
         </form>
       </>

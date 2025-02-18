@@ -1,8 +1,12 @@
 function Display({ userData }) {
   return (
     <>
-      <p>Hello World?</p>
-      <p>Name: ${userData.name}</p>
+      {Object.keys(userData).map((key) => (
+        <p key={key}>
+          {key.replace(/([a-z])([A-Z])/g, "$1 $2").toUpperCase()}:{" "}
+          {userData[key]}
+        </p>
+      ))}
     </>
   );
 }
